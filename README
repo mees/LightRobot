@@ -1,0 +1,8 @@
+The aim of this project is to control a modified 3pi pololu robot using Android's voice controls and gyroscope.
+Motivation was to learn some android and arduino programming, as well as having a cool moving lightsource at home :-)
+
+We added 3 RGB LEDs on top of the robot, a bluetooth chip(rn42) and a sonar sensor(srf02) on the front, in order to avoid obstacles when 
+moving randomly. 
+As you can see in the demo video, it is possible to adjust manually the color settings with the android app, and activate a blink or shine mode.
+Also, shining and blinkin in random colors is possible. Regardins voice controls, you can command "shine + color", "blink + color" and "move random", where color are "red, blue and green".
+To control the speed and the direction of the robot, we rely on the gyroscope of the smartphones sensor.

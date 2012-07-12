@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--
+        <ListView
+        android:id="@+id/in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/button_move_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/move_left" />
+
+            <Button
+                android:id="@+id/button_move_forward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/move_forward" />
+
+            <Button
+                android:id="@+id/button_move_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/move_stop" />
+
+            <Button
+                android:id="@+id/button_move_backward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/move_backward" />
+
+            <Button
+                android:id="@+id/button_move_right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/move_right" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/choice_mode"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/choice_mode_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/choice_mode_0_text" />
+
+            <RadioButton
+                android:id="@+id/choice_mode_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_mode_1_text" />
+
+            <RadioButton
+                android:id="@+id/choice_mode_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_mode_2_text" />
+
+            <RadioButton
+                android:id="@+id/choice_mode_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_mode_3_text" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/choice_color"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/choice_color_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/choice_color_0_text" />
+
+            <RadioButton
+                android:id="@+id/choice_color_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_color_1_text" />
+
+            <RadioButton
+                android:id="@+id/choice_color_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_color_2_text" />
+
+            <RadioButton
+                android:id="@+id/choice_color_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choice_color_3_text" />
+        </RadioGroup>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false" >
+
+                <SeekBar
+                    android:id="@+id/seek_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progress="0"
+                    android:max="63" />
+
+                <SeekBar
+                    android:id="@+id/seek_brightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" 
+                    android:progress="0"
+                    android:max="254" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/name_data_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_data_direction_value" />
+
+                <TextView
+                    android:id="@+id/data_direction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/name_data_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_data_speed_value" />
+
+                <TextView
+                    android:id="@+id/data_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <!-- <TableRow -->
+            <!-- android:id="@+id/tableRow2" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="0dp" -->
+            <!-- android:layout_weight="1" > -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/name_data_acc_x" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/name_data_acc_x_value" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/data_acc_x" -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:textAppearance="?android:attr/textAppearanceMedium" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/name_data_acc_y" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/name_data_acc_y_value" /> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/data_acc_y" -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:textAppearance="?android:attr/textAppearanceMedium" /> -->
+            <!-- </TableRow> -->
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/name_voice_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_data_voice_rec_value" />
+
+                <TextView
+                    android:id="@+id/data_voice_rec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.46"
+        android:gravity="center|fill"
+        android:orientation="vertical" >
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <!-- Preview: listitem=@android:layout/simple_list_item_single_choice -->
+
+<!--             <CheckedTextView -->
+<!--                 android:id="@+id/checkButtonControl" -->
+<!--                 android:layout_width="match_parent" -->
+<!--                 android:layout_height="0dp" -->
+<!--                 android:layout_weight="1" -->
+<!--                 android:gravity="center" -->
+<!--                 android:text="@string/activate_button_control" /> -->
+        </ListView>
+
+        <!-- <CheckedTextView -->
+        <!-- android:id="@+id/checkButtonControl" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="0dp" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="@string/activate_button_control" /> -->
+
+
+        <!-- <CheckedTextView -->
+        <!-- android:id="@+id/checkVoiceControl" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="0dp" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="@string/activate_voice_control" /> -->
+
+
+        <!-- <CheckedTextView -->
+        <!-- android:id="@+id/checkAccControl" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="0dp" -->
+        <!-- android:layout_weight="1" -->
+        <!-- android:gravity="center" -->
+        <!-- android:text="@string/activate_acc_control" /> -->
+
+    </LinearLayout>
+
+</LinearLayout>

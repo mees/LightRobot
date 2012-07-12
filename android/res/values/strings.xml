@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">Light Robot Remote</string>
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Light Robot Remote.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+    <string name="move_right">-&gt;</string>
+    <string name="move_forward">^</string>
+    <string name="move_backward">v</string>
+    <string name="move_left">&lt;-</string>
+    <string name="move_stop">-</string>
+    <string name="name_data_acc_x_value">Acc_x:</string>
+    <string name="name_data_acc_y_value">Acc_y:</string>
+    <string name="name_data_speed_value">Spd:</string>
+    <string name="name_data_direction_value">Dir:</string>
+    <string name="activate_acc_control">Activate Gyro-Control</string>
+    <string name="activate_voice_control">Activate Voice-Control</string>
+    <string name="activate_button_control">Activate Button-Control</string>
+    <string name="name_data_voice_rec_value">Voice comm:</string>
+    <color name="solid_red">#ffff0000</color>
+    <color name="solid_green">#ff00ff00</color>
+    <string name="choice_mode_0_text">Remote</string>
+    <string name="choice_mode_1_text">Random</string>
+    <string name="choice_mode_2_text">Forward</string>
+    <string name="choice_mode_3_text">Backward</string>
+    <string name="choice_color_0_text">Shine</string>
+    <string name="choice_color_1_text">Blink</string>
+    <string name="choice_color_2_text">Random Sh.</string>
+    <string name="choice_color_3_text">Random Bl.</string>
+</resources>

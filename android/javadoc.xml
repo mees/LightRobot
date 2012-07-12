@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="private" additionalparam=" -tag todo:cmf:&quot;To Do:&quot; &lt;SOURCEFILES&gt;" author="true" classpath="C:\Program Files (x86)\Android\android-sdk\tools\support\annotations.jar" destdir="doc" doctitle="LightRobot Doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.6" sourcefiles="src/org/lightrobotremote/DeviceListActivity.java,src/org/lightrobotremote/LightRobotAccelerometerControl.java,src/org/lightrobotremote/LightRobotRemoteInterface.java,src/org/lightrobotremote/BluetoothService.java,src/org/lightrobotremote/LightRobotVoiceControl.java,src/org/lightrobotremote/LightRobotDataManager.java" sourcepath="gen;src" splitindex="true" use="true" version="true">
+            <link href="file:/D:/DokumenteAll/Dropbox/Private/DokumenteAll/Dokumente/_Development/android/_Devel/source/LightRobot/doc/"/>
+        </javadoc>
+    </target>
+</project>
