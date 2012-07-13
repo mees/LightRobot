@@ -16,9 +16,9 @@ class TimeEvent
   /*! Callback which is executed periodically*/
   virtual void onTimeEvent()=0;
   /*! Returns an internal state.*/
-  virtual int getInternalState()=0;
+  virtual unsigned char getInternalState()=0;
   /*! Sets an internal state.*/
-  virtual void setInternalState(int state, bool update = true)=0;
+  virtual void setInternalState(unsigned char state, bool update = true)=0;
   /*! Executes a more complex (and time consuming) action.*/
   virtual void executeAction()=0;
   
