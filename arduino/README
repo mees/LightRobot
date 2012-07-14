@@ -1,0 +1,41 @@
+Readme file for the LightRobot Software
+
+A video which shows the functionality of the robot can be found here:
+http://www.youtube.com/watch?v=hJi5qhOgbXw
+
+The software is arduino based and uses a few external libs as well.
+To compile it the following libraries should be in the lib directory of Arduino:
+-> 3PI-Robot lib ("Orangutan"): http://www.pololu.com/docs/0J17/5
+-> TimedAction lib: http://arduino.cc/playground/Code/TimedAction
+
+A schematic how the different pars are wired is included.
+
+The Bluetooth module is connected using the hardware serial port which out wired on the central port of the robot (PD0 and PD1).
+
+To connect the Lights and the Range-Sensor a software I2C solution is used.
+The LCD-Panel is removed and the available ports PD2 and PD4 are used for the software I2C bus.
+
+After starting the robot the software is in the init state. Using Button A and Button B one can switch to the REMOTE-Mode or the MANUAL-Mode.
+
+In the REMOTE-Mode the robot is controlled with the Android-App
+
+The MANUAL-Mode has been used for debuging purpose and does not a have a useful functionality.
+
+A few words to the software architecture:
+
+Statemanager:
+
+The central point of the software is the statemanger. To understand the code this is the best starting point.
+
+The state machine which is implemeted in this class acquires the input data from the Bluetooth-Module, the Range-Sensor and the hardware buttons. According to the current state theses inputs are routed to the actuators like the motors, the lights and lcd-panel (if in use).
+
+
+TimedAction:
+
+To save as much processing power as possible but update the input and output as often as needed the TimedAction library is used. Each input and output entity (for example Bluetooth-Module, the lights, the motors, etc.) have their own class, but inherit from the TimeEvent(do not mistake it for TimedAction) class. Every TimeEvent has a central function which executes the main task of this entitiy.
+For example getting the bluetooth data or setting the lights to a current colour.
+
+This function is registered as the callback hook in the TimedAction and gives simple mechanism to control how often a input or output part is updated.
+For Example the motors must only be uptdated approximately every 100ms and the lights even less often. This saves a lot of processing time!
+
+In the lightrobot.ino file every registerd callback can be viewed with the assigned times periods.

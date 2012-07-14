@@ -1,0 +1,17 @@
+LightRobotRemoteControl-App Readme file
+
+The App is tested and has been used only on a HTC-Desire, means there is no guarantee that this will work on other Android-Devices as it should!
+
+A video which shows the functionality can be found here:
+http://www.youtube.com/watch?v=hJi5qhOgbXw
+
+
+There are three different ways to control the Robot:
+
+-> There are several buttons, sliders and other control elements to control the robot with Touch-Input.
+
+-> The color mode (shine, blink, shine randomly, blink randomly) and the colours (red, green, blue) can also be set with voice input (using google voice recognition).
+
+-> The movement of the LightRobot can be controlled with the accelerometer-sensor of the smartphone, makes a lot of fun.
+
+Further documentation of the used protocoll to communicate with the robot is documented in the code.
