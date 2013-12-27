@@ -6,9 +6,14 @@ http://www.youtube.com/watch?v=hJi5qhOgbXw
 The software is arduino based and uses a few external libs as well.
 To compile it the following libraries should be in the lib directory of Arduino:
 -> 3PI-Robot lib ("Orangutan"): http://www.pololu.com/docs/0J17/5
+   Download the most recent lib and add the libs OrangutanDigital, OrangutanMotors, OrangutanPushbuttons, OrangutanResources
+   to the arduino libs (ide -> sketch -> libraries -> add library -> select folder)
+   
 -> TimedAction lib: http://arduino.cc/playground/Code/TimedAction
+   Change the "WProgramm.h" to "Arduino.h" (see documented changes in project home)
+   Add to the arduino libs
 
-A schematic how the different pars are wired is included.
+A schematic how the different parts should be wired is included.
 
 The Bluetooth module is connected using the hardware serial port which out wired on the central port of the robot (PD0 and PD1).
 
